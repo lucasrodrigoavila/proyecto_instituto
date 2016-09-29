@@ -1,6 +1,5 @@
 
 
-
 class Persona:
 	def __init__ (self, nombre, apellido, dni, sexo):
 		self.nombre = nombre
@@ -22,6 +21,19 @@ class Persona:
 
 	def mostrar_listado(self):
 		print ("Listado de las Persona",, self.nombre, self.apellido, self.dni, self.sexo)
+
+
+class Profesor(Persona):
+    
+    def __init__(self, materia, estudios, asistencia):
+        Persona.__init__(self, nombre, apellido,dni, sexo)
+    
+            self.materia=materia
+            self.estudios=estudios
+            self.asistencia=asistencia
+
+    def tomarasistencia(self):
+                return self.asistencia
 
 
 class Examen():
