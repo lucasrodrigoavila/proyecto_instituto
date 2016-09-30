@@ -36,7 +36,7 @@ class Profesor(Persona):
                 return self.asistencia
 
 
-class Examen():
+class Examen(profesor,alumno):
 	def __init__(self, fecha,aula):
 		self.fecha=fecha
 		self.aula=aula
