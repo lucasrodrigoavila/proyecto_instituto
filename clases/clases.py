@@ -23,6 +23,17 @@ class Persona:
 		print ("Listado de las Persona",, self.nombre, self.apellido, self.dni, self.sexo)
 
 
+class Alumno(Persona):
+    def __init__(self, materiaquecursa, aniodeingreso, matricula):
+        Persona.__init__(self, nombre, apellido, dni, sexo)
+        
+            self.materiaquecursa=materiaquecursa
+            self.aniodeingreso=aniodeingreso
+            self.matricula=matricula
+       
+    def notasdemateria(self):
+        print("Se pide las ", self.materiaquecursa, "el alumno")
+
 class Profesor(Persona):
     
     def __init__(self, materia, estudios, asistencia):
