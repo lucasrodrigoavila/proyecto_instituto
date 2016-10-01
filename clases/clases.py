@@ -24,27 +24,28 @@ class Persona:
 
 
 class Alumno(Persona):
-    def __init__(self, materiaquecursa, aniodeingreso, matricula):
-        ##Persona.__init__(self, nombre, apellido, dni, sexo)
+    def __init__(self,  nombre, apellido, dni, sexo,materiaquecursa, aniodeingreso, matricula):
+        Persona.__init__(self, nombre, apellido, dni, sexo)
         
-            self.materiaquecursa=materiaquecursa
-            self.aniodeingreso=aniodeingreso
-            self.matricula=matricula
+        self.materiaquecursa=materiaquecursa
+        self.aniodeingreso=aniodeingreso
+        self.matricula=matricula
        
-    def notasdemateria(self):
-        print("Se pide las ", self.materiaquecursa, "el alumno")
+    def num_matricula(self):
+        print("El numero de matricula es ", self.matricula, "del alumno",self.apellido,self.nombre)
+
 
 class Profesor(Persona):
     
-    def __init__(self, materia, estudios, asistencia):
-        ##Persona.__init__(self, nombre, apellido,dni, sexo)
+    def __init__(self, nombre, apellido, dni, sexo, materia, estudios, asistencia):
+        Persona.__init__(self, nombre, apellido,dni, sexo)
     
-            self.materia=materia
-            self.estudios=estudios
-            self.asistencia=asistencia
+        self.materia=materia
+        self.estudios=estudios
+        self.asistencia=asistencia
 
     def tomarasistencia(self):
-                return self.asistencia
+        print("la asistencia del alumno",self.apellido, self.nombre, "es",self.asistencia)
 
 
 
