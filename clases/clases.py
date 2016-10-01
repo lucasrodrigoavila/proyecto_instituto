@@ -34,7 +34,6 @@ class Alumno(Persona):
     def num_matricula(self):
         print("El numero de matricula es ", self.matricula, "del alumno",self.apellido,self.nombre)
 
-
 class Profesor(Persona):
     
     def __init__(self, nombre, apellido, dni, sexo, materia, estudios, asistencia):
@@ -47,9 +46,7 @@ class Profesor(Persona):
     def tomarasistencia(self):
         print("la asistencia del alumno",self.apellido, self.nombre, "es",self.asistencia)
 
-
-
-class Examen():
+class Examen(Profesor, Alumno):
     def __init__(self, fecha,aula):
         self.fecha=fecha
         self.aula=aula
