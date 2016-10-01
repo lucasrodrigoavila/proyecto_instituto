@@ -5,5 +5,5 @@ python:
 install: "pip install coverage"
 # command to run tests
 script: 
-#- coverage run test.py
-#- coverage report
+- coverage run test.py
+- coverage report
