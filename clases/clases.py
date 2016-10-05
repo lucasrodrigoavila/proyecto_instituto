@@ -46,10 +46,11 @@ class Profesor(Persona):
     def tomarasistencia(self):
         print("la asistencia del alumno",self.apellido, self.nombre, "es",self.asistencia)
 
-class Examen(Profesor, Alumno):
-    def __init__(self, fecha,aula):
+class Examen:
+    def __init__(self, fecha,aula, Profesor, Alumno):
         self.fecha=fecha
         self.aula=aula
-        
+        self.Profesor=Profesor
+        self.Alumno=Alumno
 
 
