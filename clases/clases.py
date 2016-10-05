@@ -47,10 +47,20 @@ class Profesor(Persona):
         print("la asistencia del alumno",self.apellido, self.nombre, "es",self.asistencia)
 
 class Examen:
-    def __init__(self, fecha,aula, Profesor, Alumno):
+    def __init__(self, fecha,aula, profesor, Alumno):
         self.fecha=fecha
         self.aula=aula
-        self.Profesor=Profesor
-        self.Alumno=Alumno
+        self.profesor=profesor
+        self.alumnos=Alumno
+
+
+    def mostrar(self):
+        print ("el examen es el dia", self.fecha)
+        print ("En el aula", self.aula)
+
+        print("Con el profesor", self.profesor.nombre, self.profesor.apellido, self.profesor.materia)
+
+        for alumno in self.alumnos:
+            print ("Alumno", alumno.nombre, alumno.apellido, alumno.matricula)
 
 
